@@ -17,7 +17,7 @@ const PORT = 3000;
 
 //mongoose connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/swshotels', {
+mongoose.connect('mongodb://heroku_6hsfhqzk:qsa838q54qos93to984leeiphk@ds125831.mlab.com:25831/heroku_6hsfhqzk', {
     useMongoCLient: true
 });
 
