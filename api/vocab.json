@@ -1,8 +1,8 @@
 {
-    "@id": "http://38add60d.ngrok.io/api/vocab",
+    "@id": "https://afternoon-meadow-35531.herokuapp.com/api/vocab",
     "@type": "ApiDocumentation",
     "@context": {
-        "vocab": "http://38add60d.ngrok.io/api/vocab#",
+        "vocab": "https://afternoon-meadow-35531.herokuapp.com/api/vocab#",
         "hydra": "http://www.w3.org/ns/hydra/core#",
         "ApiDocumentation": "hydra:ApiDocumentation",
         "property": {

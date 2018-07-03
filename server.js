@@ -31,7 +31,7 @@ app.use(express.json());
 // Set content type
 app.use(function (req, res, next) {
     res.setHeader("Content-Type", 'application/ld+json');
-    res.setHeader("Link", '<http://38add60d.ngrok.io/api/vocab>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"');
+    res.setHeader("Link", '<https://afternoon-meadow-35531.herokuapp.com/api/vocab>; rel="http://www.w3.org/ns/hydra/core#apiDocumentation"');
     res.contentType('application/ld+json');
     next();
   });

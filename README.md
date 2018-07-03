@@ -10,8 +10,10 @@ Topic: Hotel Booking API
 Version: 2.0
 
 ### hydra
-use `http://38add60d.ngrok.io/api/hotels/5aeb56f1eb089a6227c8fcf0` in the hydra console.
-It should work as long as my laptop is turned on.
+Use `https://afternoon-meadow-35531.herokuapp.com/api/hotels/5aeb56f1eb089a6227c8fcf0` in the hydra console.
+
+It accesses our app and our mongodb that are installed on the heroku platform.
+
 
 ### Project setup:
 
