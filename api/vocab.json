@@ -312,7 +312,7 @@
         {
             "@id": "https://schema.org/PriceSpecification",
             "@type": "hydra:Class",
-            "hydra:title": "Room Price",
+            "hydra:title": "Price",
             "hydra:description": "Hotel room prices.",
             "supportedOperation": [
                 {
