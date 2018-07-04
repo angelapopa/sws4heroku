@@ -23,11 +23,11 @@ RoomSchema.method('toJSON', function() {
     var room = this.toObject();
 
     room["@type"] = "Offer";
-    room["@context"] = "http://schema.org/";
+    room["@context"] = "https://schema.org/";
 
     let formattedName0 = room.name.replace(/\s+/g, "%20");
     let formattedName = formattedName0.replace(/\//g, "%2F");
-    room["@id"] = "/api/room/" + formattedName;
+    room["@id"] = "/api/rooms/" + formattedName;
 
     room.itemOffered.forEach(function (item) {
       item["@type"] = "Product";

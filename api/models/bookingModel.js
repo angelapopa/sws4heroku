@@ -21,7 +21,7 @@ BookingSchema.method('toJSON', function() {
     //so that /api/booking/id makes sense
     booking["@id"] = "/api/bookings/" + booking._id;
 
-    booking["@context"] = "http://schema.org/";
+    booking["@context"] = "https://schema.org/";
     booking["@type"] = "LodgingReservation";
 
     delete booking._id;

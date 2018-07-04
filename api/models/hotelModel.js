@@ -48,10 +48,9 @@ HotelSchema.method('toJSON', function() {
 
     hotel["@id"] = "/api/hotels/" + hotel._id;
 
-    hotel["@context"] = "http://schema.org/";
+    hotel["@context"] = "https://schema.org/";
     hotel["@type"] = "Hotel";
 
-    //TODO: handle links somehow different
     delete hotel.links;
 
     delete hotel._id; //_id was assigned previously to the new field @id

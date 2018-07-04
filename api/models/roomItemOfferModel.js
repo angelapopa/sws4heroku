@@ -9,8 +9,7 @@ export const RoomItemOfferSchema = new Schema({
     occupancy: {
         maxValue: {type: Number},
         minValue: {type: Number}
-    },
-    dummy: {type: String}
+    }
  });
 
 //hiding mongo db fields
