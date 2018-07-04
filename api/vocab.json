@@ -44,19 +44,19 @@
     },
     "supportedClass": [
         {
-            "@id": "http://schema.org/Hotel",
+            "@id": "https://schema.org/Hotel",
             "@type": "hydra:Class",
             "hydra:title": "Hotel",
             "hydra:description": null,
             "supportedOperation": [
                 {
                     "@id": "_:hotel_replace",
-                    "@type": "http://schema.org/UpdateAction",
+                    "@type": "https://schema.org/UpdateAction",
                     "method": "PUT",
                     "label": "Replaces an existing hotel entity",
                     "description": null,
-                    "expects": "http://schema.org/Hotel",
-                    "returns": "http://schema.org/Hotel",
+                    "expects": "https://schema.org/Hotel",
+                    "returns": "https://schema.org/Hotel",
                     "statusCodes": [
                         {
                             "code": 404,
@@ -66,7 +66,7 @@
                 },
                 {
                     "@id": "_:hotel_create",
-                    "@type": "http://schema.org/CreateAction",
+                    "@type": "https://schema.org/CreateAction",
                     "method": "POST",
                     "label": "Creates a Hotel entity",
                     "description": null,
@@ -81,13 +81,13 @@
                     "label": "Retrieves a Hotel entity",
                     "description": null,
                     "expects": null,
-                    "returns": "http://schema.org/Hotel",
+                    "returns": "https://schema.org/Hotel",
                     "statusCodes": []
                 }
             ],
             "supportedProperty": [
                 {
-                    "property": "http://schema.org/name",
+                    "property": "https://schema.org/name",
                     "hydra:title": "name",
                     "hydra:description": "The hotels name",
                     "required": true,
@@ -95,7 +95,7 @@
                     "writeonly": false
                 },
                 {
-                    "property": "http://schema.org/description",
+                    "property": "https://schema.org/description",
                     "hydra:title": "description",
                     "hydra:description": "Description of the hotel",
                     "required": true,
@@ -103,7 +103,7 @@
                     "writeonly": false
                 },
                 {
-                    "property": "http://schema.org/url",
+                    "property": "https://schema.org/url",
                     "hydra:title": "url",
                     "hydra:description": "The url of the hotel",
                     "required": true,
@@ -113,14 +113,14 @@
             ]
         },
         {
-            "@id": "http://schema.org/LodgingReservation",
+            "@id": "https://schema.org/LodgingReservation",
             "@type": "hydra:Class",
-            "hydra:title": "Booking",
+            "hydra:title": "LodgingReservation",
             "hydra:description": "Hotel room bookings are annotated as reservations.",
             "supportedOperation": [
                 {
                     "@id": "_:booking_create",
-                    "@type": "http://schema.org/CreateAction",
+                    "@type": "https://schema.org/CreateAction",
                     "method": "POST",
                     "label": "Creates a new Room Booking entity",
                     "description": null,
@@ -135,13 +135,13 @@
                     "label": "Retrieves a Room Booking entity",
                     "description": null,
                     "expects": null,
-                    "returns": "http://schema.org/LodgingReservation",
+                    "returns": "https://schema.org/LodgingReservation",
                     "statusCodes": []
                 }
             ],
             "supportedProperty": [
                 {
-                    "property": "http://schema.org/underName",
+                    "property": "https://schema.org/underName",
                     "hydra:title": "lastname",
                     "hydra:description": "The name (lastname) on which the room booking is made.",
                     "required": true,
@@ -149,7 +149,7 @@
                     "writeonly": false
                 },
                 {
-                    "property": "http://schema.org/QuantitativeValue",
+                    "property": "https://schema.org/QuantitativeValue",
                     "hydra:title": "numberOfRooms",
                     "hydra:description": "The number of rooms this booking refers to.",
                     "required": true,
@@ -157,7 +157,7 @@
                     "writeonly": false
                 },
                 {
-                    "property": "http://schema.org/checkinTime",
+                    "property": "https://schema.org/checkinTime",
                     "hydra:title": "from",
                     "hydra:description": "The start date of the validity period for this booking.",
                     "required": true,
@@ -165,7 +165,7 @@
                     "writeonly": false
                 },
                 {
-                    "property": "http://schema.org/checkoutTime",
+                    "property": "https://schema.org/checkoutTime",
                     "hydra:title": "to",
                     "hydra:description": "The end date of the validity period for this booking.",
                     "required": true,
@@ -175,7 +175,7 @@
             ]
         },
         {
-            "@id": "http://schema.org/Offer",
+            "@id": "https://schema.org/Offer",
             "@type": "hydra:Class",
             "hydra:title": "Offer",
             "hydra:description": "Hotel rooms are annotated as offers.",
@@ -187,13 +187,13 @@
                     "label": "Retrieves a room offer entity",
                     "description": null,
                     "expects": null,
-                    "returns": "http://schema.org/Offer",
+                    "returns": "https://schema.org/Offer",
                     "statusCodes": []
                 }
             ],
             "supportedProperty": [
                 {
-                    "property": "http://schema.org/name",
+                    "property": "https://schema.org/name",
                     "hydra:title": "name",
                     "hydra:description": "The name of the offered room.",
                     "required": true,
@@ -201,14 +201,6 @@
                     "writeonly": false
                 }
             ]
-        },
-        {
-            "@id": "http://www.w3.org/ns/hydra/core#Collection",
-            "@type": "hydra:Class",
-            "hydra:title": "Collection",
-            "hydra:description": null,
-            "supportedOperation": [],
-            "supportedProperty": []
         }
     ]
 }
