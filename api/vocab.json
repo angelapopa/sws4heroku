@@ -328,15 +328,6 @@
             ],
             "supportedProperty": [
                 {
-                    "description": "Pax 2",
-                    "minPrice": 28,
-                    "maxPrice": 28,
-                    "priceCurrency": "EUR",
-                    "@type": "PriceSpecification",
-                    "@context": "https://schema.org/"
-                  },
-
-                {
                     "property": "https://schema.org/description",
                     "hydra:title": "description",
                     "hydra:description": "The number of persons per room.",
