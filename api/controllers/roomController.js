@@ -51,17 +51,23 @@ export const getHotelRoomPrices = (req, res) => {
         }
         if (hotel != null){
             let found = false;
+            let resultList = [];
             hotel.makesOffer.forEach(function(element) {
                 if (element.name == roomName){
-                    console.log("Found priceSpecification for offer "+ element.name + " :");
-                    res.status(200).json(element.priceSpecification);
                     found = true;
+                    console.log("Found priceSpecification for offer "+ element.name + " :");
+                    element.priceSpecification.forEach(function(price) {
+                        resultList.push(price);
+                    }
+                    );
                 }
             });
 
             if (!found){
                 res.status(404).send("No room offer '"+ roomName + "' "+ "for hotel '" + hotelId + "' was not found!");
             }
+
+            res.status(200).json(resultList);
         }
     });
 };
