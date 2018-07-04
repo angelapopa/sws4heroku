@@ -175,6 +175,50 @@
             ]
         },
         {
+            "@id": "http://schema.org/Offer",
+            "@type": "hydra:Class",
+            "hydra:title": "Hotel Room",
+            "hydra:description": "Hotel rooms are annotated as offers.",
+            "supportedOperation": [
+                {
+                    "@id": "_:offer_retrieve",
+                    "@type": "hydra:Operation",
+                    "method": "GET",
+                    "label": "Retrieves a Room/Offer entity",
+                    "description": null,
+                    "expects": null,
+                    "returns": "http://schema.org/Offer",
+                    "statusCodes": []
+                }
+            ],
+            "supportedProperty": [
+                {
+                    "property": "http://www.w3.org/ns/hydra/core#Collection",
+                    "hydra:title": "bookings",
+                    "hydra:description": "A list of bookings for this room.",
+                    "required": true,
+                    "readonly": false,
+                    "writeonly": false
+                },
+                {
+                    "property": "http://www.w3.org/ns/hydra/core#Collection",
+                    "hydra:title": "itemOffered",
+                    "hydra:description": "The product offered.",
+                    "required": true,
+                    "readonly": false,
+                    "writeonly": false
+                },
+                {
+                    "property": "http://schema.org/name",
+                    "hydra:title": "name",
+                    "hydra:description": "The name of the offered room.",
+                    "required": true,
+                    "readonly": false,
+                    "writeonly": false
+                }
+            ]
+        },
+        {
             "@id": "http://www.w3.org/ns/hydra/core#Collection",
             "@type": "hydra:Class",
             "hydra:title": "Collection",
