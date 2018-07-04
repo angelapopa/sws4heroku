@@ -316,7 +316,7 @@
             "hydra:description": "Hotel room prices.",
             "supportedOperation": [
                 {
-                    "@id": "_:offer_retrieve",
+                    "@id": "_:price_retrieve",
                     "@type": "hydra:Operation",
                     "method": "GET",
                     "label": "Retrieves the prices for a room.",
