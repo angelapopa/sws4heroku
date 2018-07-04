@@ -116,7 +116,7 @@
             "@id": "http://schema.org/LodgingReservation",
             "@type": "hydra:Class",
             "hydra:title": "Booking",
-            "hydra:description": "Hotel rooms bookings are annotated as reservations.",
+            "hydra:description": "Hotel room bookings are annotated as reservations.",
             "supportedOperation": [
                 {
                     "@id": "_:booking_create",
@@ -129,7 +129,7 @@
                     "statusCodes": []
                 },
                 {
-                    "@id": "_:hotel_retrieve",
+                    "@id": "_:booking_retrieve",
                     "@type": "hydra:Operation",
                     "method": "GET",
                     "label": "Retrieves a Room Booking entity",
@@ -141,17 +141,9 @@
             ],
             "supportedProperty": [
                 {
-                    "property": "http://schema.org/undername",
+                    "property": "http://schema.org/underName",
                     "hydra:title": "lastname",
                     "hydra:description": "The name (lastname) on which the room booking is made.",
-                    "required": true,
-                    "readonly": false,
-                    "writeonly": false
-                },
-                {
-                    "property": "http://schema.org/undername",
-                    "hydra:title": "firstname",
-                    "hydra:description": "The name (firstname) on which the room booking is made.",
                     "required": true,
                     "readonly": false,
                     "writeonly": false
