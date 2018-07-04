@@ -173,6 +173,14 @@
                     "writeonly": false
                 }
             ]
+        },
+        {
+            "@id": "http://www.w3.org/ns/hydra/core#Collection",
+            "@type": "hydra:Class",
+            "hydra:title": "Collection",
+            "hydra:description": null,
+            "supportedOperation": [],
+            "supportedProperty": []
         }
     ]
 }

@@ -23,7 +23,8 @@ RoomSchema.method('toJSON', function() {
     var room = this.toObject();
 
     room["@type"] = "Offer";
-    
+    room["@context"] = "http://schema.org/";
+
     room.itemOffered.forEach(function (item) {
       item["@type"] = "Product";
       item.occupancy["@type"] = "QuantitativeValue";
