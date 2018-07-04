@@ -1,6 +1,8 @@
 import mongoose from 'mongoose';
 import {BookingSchema} from './bookingModel';
-import {LinkSchema} from './linkModel'
+import {LinkSchema} from './linkModel';
+import {RoomItemOfferSchema} from './roomItemOfferModel';
+import {PriceSpecificationSchema} from './roomPriceModel';
 
 const Schema = mongoose.Schema;
 
@@ -9,12 +11,8 @@ export const RoomSchema = new Schema({
     name : {type: String},
     description: {type: String},
     bookings: [BookingSchema],
-    priceSpecification: [{ //TODO consider moving this in its own schema
-        description: {type: String},
-        minPrice: {type: Number},
-        maxPrice: {type: Number},
-        priceCurrency: {type: String}
-    }],
+    itemOffered: [RoomItemOfferSchema],
+    priceSpecification: [PriceSpecificationSchema],
     links: [LinkSchema]
  });
 
@@ -24,7 +22,12 @@ export const RoomSchema = new Schema({
 RoomSchema.method('toJSON', function() {
     var room = this.toObject();
 
-    room.priceSpecification["@type"] = "PriceSpecification"
+    room["@type"] = "Offer";
+    
+    room.itemOffered.forEach(function (item) {
+      item["@type"] = "Product";
+      item.occupancy["@type"] = "QuantitativeValue";
+    })
 
     delete room.__v;
     //in this dataset, availability has always schema.org value InStock, so it will not be displayed to the end user

@@ -16,6 +16,15 @@ export const BookingSchema = new Schema({
 //by a GET request
 BookingSchema.method('toJSON', function() {
     var booking = this.toObject();
+
+    //TODO: parent hotel and room are not known at this point, so make a new endpoint for bookings
+    //so that /api/booking/id makes sense
+    booking["@id"] = "/api/bookings/" + booking._id;
+
+    booking["@context"] = "http://schema.org/";
+    booking["@type"] = "Offer";
+
+    delete booking._id;
     delete booking.__v;
     return booking;
   });
