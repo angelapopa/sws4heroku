@@ -47,12 +47,7 @@ HotelSchema.method('toJSON', function() {
     var hotel = this.toObject();
 
     hotel["@id"] = "/api/hotels/" + hotel._id;
-    
-    //does not work
-    //hotel["@context"] = "/api/vocab";
-    //hotel["@type"] = "http://schema.org/Hotel";
 
-    //works
     hotel["@context"] = "http://schema.org/";
     hotel["@type"] = "Hotel";
 
