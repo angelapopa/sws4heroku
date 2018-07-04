@@ -44,6 +44,89 @@
     },
     "supportedClass": [
         {
+            "@id": "vocab:EntryPoint",
+            "@type": "hydra:Class",
+            "subClassOf": null,
+            "label": "EntryPoint",
+            "description": "The main entry point of the Hotel API.",
+            "supportedOperation": [
+                {
+                    "@id": "_:entry_point",
+                    "@type": "hydra:Operation",
+                    "method": "GET",
+                    "label": "The APIs main entry point.",
+                    "description": null,
+                    "expects": null,
+                    "returns": "vocab:EntryPoint",
+                    "statusCodes": []
+                }
+            ],
+            "supportedProperty": [
+                {
+                    "property": {
+                        "@id": "vocab:EntryPoint/api/hotels",
+                        "@type": "hydra:Link",
+                        "label": "hotels",
+                        "description": "The hotels collection",
+                        "domain": "vocab:EntryPoint",
+                        "range": "vocab:HotelCollection",
+                        "supportedOperation": [
+                            {
+                                "@id": "_:hotel_collection_retrieve",
+                                "@type": "hydra:Operation",
+                                "method": "GET",
+                                "label": "Retrieves all Hotel entities",
+                                "description": null,
+                                "expects": null,
+                                "returns": "vocab:HotelCollection",
+                                "statusCodes": []
+                            }
+                        ]
+                    },
+                    "hydra:title": "hotels",
+                    "hydra:description": "The hotels collection",
+                    "required": null,
+                    "readonly": true,
+                    "writeonly": false
+                }
+            ]
+        },
+        {
+            "@id": "vocab:HotelCollection",
+            "@type": "hydra:Class",
+            "subClassOf": "http://www.w3.org/ns/hydra/core#Collection",
+            "label": "HotelCollection",
+            "description": "A collection of hotels",
+            "supportedOperation": [
+                {
+                    "@id": "_:hotel_create",
+                    "@type": "http://schema.org/AddAction",
+                    "method": "POST",
+                    "label": "Creates a new Hotel entity",
+                    "description": null,
+                    "expects": "http://schema.org/Hotel",
+                    "returns": "http://schema.org/Hotel",
+                    "statusCodes": [
+                        {
+                            "code": 201,
+                            "description": "If the Event entity was created successfully."
+                        }
+                    ]
+                },
+                {
+                    "@id": "_:hotel_collection_retrieve",
+                    "@type": "hydra:Operation",
+                    "method": "GET",
+                    "label": "Retrieves all Hotel entities",
+                    "description": null,
+                    "expects": null,
+                    "returns": "vocab:HotelCollection",
+                    "statusCodes": []
+                }
+            ],
+            "supportedProperty": []
+        },
+        {
             "@id": "https://schema.org/Hotel",
             "@type": "hydra:Class",
             "hydra:title": "Hotel",
@@ -124,7 +207,7 @@
             "@id": "https://schema.org/LodgingReservation",
             "@type": "hydra:Class",
             "hydra:title": "Booking",
-            "hydra:description": "Hotel room bookings are annotated as reservations.",
+            "hydra:description": "Hotel room bookings are annotated as https://schema.org/LodgingReservation.",
             "supportedOperation": [
                 {
                     "@id": "_:booking_create",
@@ -220,6 +303,67 @@
                     "property": "http://www.w3.org/ns/hydra/core#Collection",
                     "hydra:title": "itemOffered",
                     "hydra:description": "The rooms offered by this offer.",
+                    "required": false,
+                    "readonly": false,
+                    "writeonly": false
+                }
+            ]
+        },
+        {
+            "@id": "https://schema.org/PriceSpecification",
+            "@type": "hydra:Class",
+            "hydra:title": "Room Price",
+            "hydra:description": "Hotel room prices.",
+            "supportedOperation": [
+                {
+                    "@id": "_:offer_retrieve",
+                    "@type": "hydra:Operation",
+                    "method": "GET",
+                    "label": "Retrieves the prices for a room.",
+                    "description": null,
+                    "expects": null,
+                    "returns": "https://schema.org/PriceSpecification",
+                    "statusCodes": []
+                }
+            ],
+            "supportedProperty": [
+                {
+                    "description": "Pax 2",
+                    "minPrice": 28,
+                    "maxPrice": 28,
+                    "priceCurrency": "EUR",
+                    "@type": "PriceSpecification",
+                    "@context": "https://schema.org/"
+                  },
+
+                {
+                    "property": "https://schema.org/description",
+                    "hydra:title": "description",
+                    "hydra:description": "The number of persons per room.",
+                    "required": true,
+                    "readonly": false,
+                    "writeonly": false
+                },
+                {
+                    "property": "https://schema.org/minPrice",
+                    "hydra:title": "minPrice",
+                    "hydra:description": "The lowest price.",
+                    "required": false,
+                    "readonly": false,
+                    "writeonly": false
+                },
+                {
+                    "property": "https://schema.org/maxPrice",
+                    "hydra:title": "maxPrice",
+                    "hydra:description": "The highest price.",
+                    "required": false,
+                    "readonly": false,
+                    "writeonly": false
+                },
+                {
+                    "property": "https://schema.org/priceCurrency",
+                    "hydra:title": "currency",
+                    "hydra:description": "The currency in which the price is expressed in.",
                     "required": false,
                     "readonly": false,
                     "writeonly": false
