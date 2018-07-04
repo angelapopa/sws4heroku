@@ -109,6 +109,14 @@
                     "required": true,
                     "readonly": false,
                     "writeonly": false
+                },
+                {
+                    "property": "https://schema.org/priceRange",
+                    "hydra:title": "url",
+                    "hydra:description": "The price range of the hotel",
+                    "required": true,
+                    "readonly": false,
+                    "writeonly": false
                 }
             ]
         },
