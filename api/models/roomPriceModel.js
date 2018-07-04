@@ -17,6 +17,7 @@ PriceSpecificationSchema.method('toJSON', function() {
     var price = this.toObject();
 
     price["@type"] = "PriceSpecification";
+    price["@context"] = "http://schema.org/";
 
     return price;
   });
