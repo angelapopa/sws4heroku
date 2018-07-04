@@ -177,14 +177,14 @@
         {
             "@id": "http://schema.org/Offer",
             "@type": "hydra:Class",
-            "hydra:title": "Hotel Room",
+            "hydra:title": "Offer",
             "hydra:description": "Hotel rooms are annotated as offers.",
             "supportedOperation": [
                 {
                     "@id": "_:offer_retrieve",
                     "@type": "hydra:Operation",
                     "method": "GET",
-                    "label": "Retrieves a Room/Offer entity",
+                    "label": "Retrieves a room offer entity",
                     "description": null,
                     "expects": null,
                     "returns": "http://schema.org/Offer",
@@ -192,22 +192,6 @@
                 }
             ],
             "supportedProperty": [
-                {
-                    "property": "http://www.w3.org/ns/hydra/core#Collection",
-                    "hydra:title": "bookings",
-                    "hydra:description": "A list of bookings for this room.",
-                    "required": true,
-                    "readonly": false,
-                    "writeonly": false
-                },
-                {
-                    "property": "http://www.w3.org/ns/hydra/core#Collection",
-                    "hydra:title": "itemOffered",
-                    "hydra:description": "The product offered.",
-                    "required": true,
-                    "readonly": false,
-                    "writeonly": false
-                },
                 {
                     "property": "http://schema.org/name",
                     "hydra:title": "name",
