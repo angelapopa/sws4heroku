@@ -112,7 +112,7 @@
                 },
                 {
                     "property": "https://schema.org/priceRange",
-                    "hydra:title": "url",
+                    "hydra:title": "priceRange",
                     "hydra:description": "The price range of the hotel",
                     "required": true,
                     "readonly": false,
