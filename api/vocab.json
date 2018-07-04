@@ -123,7 +123,7 @@
         {
             "@id": "https://schema.org/LodgingReservation",
             "@type": "hydra:Class",
-            "hydra:title": "LodgingReservation",
+            "hydra:title": "Booking",
             "hydra:description": "Hotel room bookings are annotated as reservations.",
             "supportedOperation": [
                 {
@@ -204,6 +204,22 @@
                     "property": "https://schema.org/name",
                     "hydra:title": "name",
                     "hydra:description": "The name of the offered room.",
+                    "required": true,
+                    "readonly": false,
+                    "writeonly": false
+                },
+                {
+                    "property": "http://www.w3.org/ns/hydra/core#Collection",
+                    "hydra:title": "bookings",
+                    "hydra:description": "A list of bookings for this offer.",
+                    "required": true,
+                    "readonly": false,
+                    "writeonly": false
+                },
+                {
+                    "property": "http://www.w3.org/ns/hydra/core#Collection",
+                    "hydra:title": "itemOffered",
+                    "hydra:description": "The rooms offered by this offer.",
                     "required": true,
                     "readonly": false,
                     "writeonly": false
