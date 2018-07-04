@@ -22,7 +22,7 @@ BookingSchema.method('toJSON', function() {
     booking["@id"] = "/api/bookings/" + booking._id;
 
     booking["@context"] = "http://schema.org/";
-    booking["@type"] = "Offer";
+    booking["@type"] = "LodgingReservation";
 
     delete booking._id;
     delete booking.__v;
