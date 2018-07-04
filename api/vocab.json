@@ -207,14 +207,6 @@
                     "required": true,
                     "readonly": false,
                     "writeonly": false
-                },
-                {
-                    "property": "http://www.w3.org/ns/hydra/core#Collection",
-                    "hydra:title": "itemOffered",
-                    "hydra:description": "The rooms offered by this offer.",
-                    "required": false,
-                    "readonly": false,
-                    "writeonly": false
                 }
             ]
         }
