@@ -212,7 +212,7 @@
                     "property": "http://www.w3.org/ns/hydra/core#Collection",
                     "hydra:title": "bookings",
                     "hydra:description": "A list of bookings for this offer.",
-                    "required": true,
+                    "required": false,
                     "readonly": false,
                     "writeonly": false
                 },
@@ -220,7 +220,7 @@
                     "property": "http://www.w3.org/ns/hydra/core#Collection",
                     "hydra:title": "itemOffered",
                     "hydra:description": "The rooms offered by this offer.",
-                    "required": true,
+                    "required": false,
                     "readonly": false,
                     "writeonly": false
                 }
