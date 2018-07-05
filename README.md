@@ -107,6 +107,8 @@ No other software/tools are needed to be installed.
 
 * Implemeting Http request by Rest Client, not hydra vocab till now.
 
+![Rest Client][Client]
+
  [Client]: /doc/images/Rest.PNG "Rest Client"
 
 ## Endpoints
