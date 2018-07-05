@@ -20,7 +20,7 @@ https://github.com/angelapopa/sws4heroku.git.
 
 Currently it is split into 2 parts, a server and a client.
 
-### The Server
+## The Server
 
 Our server was implemented with NodeJS and is currently available on heroku.
 e.g.
@@ -91,7 +91,7 @@ Annotate remaining endpoints with hydra classes.
 Annotate paginagion with hydra for the list of hotels.
 Annotate remaining endpoints data with schema.org annotations.
 
-### The Generic Client
+## The Generic Client
 
 Our client was implemented in .NET and is testable by starting the executable
 `RestClientEnd.exe` located at
