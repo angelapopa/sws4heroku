@@ -104,11 +104,10 @@ Prerequisites: a running Windows instance and cloning the source code.
 No other software/tools are needed to be installed.
 
 #### What the client does?
-TODO: describe the features
-TODO: maybe one screenshot
 
-#### Future work for the client side
-TODO: describe future work, so what is currently missing
+* Implemeting Http request by Rest Client, not hydra vocab till now.
+
+ [Client]: /doc/images/Rest.png "Rest Client"
 
 ## Endpoints
 
