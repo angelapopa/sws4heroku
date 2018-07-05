@@ -9,6 +9,8 @@ Topic: Hotel Booking Web API (Hydra)
 
 Version: 2.0
 
+Level: Assignment 7
+
 ### Introduction
 
 Our assignment was to implement a Hotel Booking Web API
@@ -116,7 +118,7 @@ TODO: describe future work, so what is currently missing
 
 ### Enpoints/Resources implemented for Assignment 4
 
-Currently not all were annotated with hydra.
+Currently not all are annotated with hydra for assignment 7.
 
   |  | HTTP Request type | Endpoint| Resulting HTTP Code| Resulting action  |
   |--- | --- | :--- | :--- | --- |
