@@ -101,6 +101,7 @@ Our client was implemented in .NET and is testable by starting the executable
 `https://github.com/angelapopa/sws4heroku/tree/master/RestClient/`.
 
 Prerequisites: a running Windows instance and cloning the source code.
+No other software/tools are needed to be installed.
 
 #### What the client does?
 TODO: describe the features
@@ -108,6 +109,8 @@ TODO: maybe one screenshot
 
 #### Future work for the client side
 TODO: describe future work, so what is currently missing
+
+## Endpoints
 
 ### Enpoints currently working in the hydra console
 `/api/hotels/5aeb56f1eb089a6227c8fcf4/`
